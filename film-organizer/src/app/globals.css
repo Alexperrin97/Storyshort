@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --muted: #8b949e;
+}
+
+body {
+  background-color: var(--bg);
+  color: #e6edf3;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-150 cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-red-600 hover:bg-red-500 text-white;
+  }
+  .btn-secondary {
+    @apply btn bg-[#21262d] hover:bg-[#30363d] text-[#e6edf3] border border-[#30363d];
+  }
+  .btn-ghost {
+    @apply btn hover:bg-[#21262d] text-[#8b949e] hover:text-[#e6edf3];
+  }
+  .btn-danger {
+    @apply btn bg-transparent hover:bg-red-900/30 text-red-400 hover:text-red-300;
+  }
+  .card {
+    @apply bg-[#161b22] border border-[#30363d] rounded-lg;
+  }
+  .input {
+    @apply bg-[#0d1117] border border-[#30363d] rounded-md px-3 py-2 text-sm text-[#e6edf3]
+           placeholder-[#8b949e] focus:outline-none focus:border-[#58a6ff] transition-colors w-full;
+  }
+  .label {
+    @apply block text-xs font-medium text-[#8b949e] mb-1 uppercase tracking-wide;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+  .table-row-hover {
+    @apply hover:bg-[#1c2128] transition-colors;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+  .card { border: 1px solid #ccc !important; background: white !important; }
+}
