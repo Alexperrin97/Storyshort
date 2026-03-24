@@ -7,43 +7,55 @@ export interface Database {
         Row: Project;
         Insert: Omit<Project, 'id' | 'created_at' | 'updated_at' | 'share_token'>;
         Update: Partial<Omit<Project, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       scenes: {
         Row: Scene;
         Insert: Omit<Scene, 'id' | 'created_at'>;
         Update: Partial<Omit<Scene, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       team_members: {
         Row: TeamMember;
         Insert: Omit<TeamMember, 'id' | 'created_at'>;
         Update: Partial<Omit<TeamMember, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       shooting_days: {
         Row: ShootingDay;
         Insert: Omit<ShootingDay, 'id' | 'created_at'>;
         Update: Partial<Omit<ShootingDay, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       incidents: {
         Row: Incident;
         Insert: Omit<Incident, 'id' | 'created_at'>;
         Update: Partial<Omit<Incident, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       rushes: {
         Row: Rush;
         Insert: Omit<Rush, 'id' | 'created_at'>;
         Update: Partial<Omit<Rush, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       postprod_tasks: {
         Row: PostProdTask;
         Insert: Omit<PostProdTask, 'id' | 'created_at'>;
         Update: Partial<Omit<PostProdTask, 'id' | 'created_at'>>;
+        Relationships: [];
       };
       budget_lines: {
         Row: BudgetLine;
         Insert: Omit<BudgetLine, 'id' | 'created_at'>;
         Update: Partial<Omit<BudgetLine, 'id' | 'created_at'>>;
+        Relationships: [];
       };
     };
+    Views: Record<string, never>;
+    Functions: Record<string, never>;
+    Enums: Record<string, never>;
+    CompositeTypes: Record<string, never>;
   };
 }
 
